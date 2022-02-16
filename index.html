@@ -2,43 +2,8 @@
 <html>
 
 <head>
-    <script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function () { myFunction() };
 
-        // Get the navbar
-        var navbar = document.getElementById("navbar");
-
-        // Get the offset position of the navbar
-        var sticky = navbar.offsetTop;
-
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        } 
-    </script>
     <!--CSS Styling-->
-    <style>
-        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-
-        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-        .sticky+.content {
-            padding-top: 60px;
-        }
-
-        .content {
-            padding: 16px;
-        }
-
         html,
         body {
             margin: 0;
@@ -258,12 +223,6 @@
 <body>
     <div class="bgimgcontainer fadein">
         <div class="bgimg">
-            <nav class="fadein">
-                <li><a href="default.asp">Home</a></li>
-                <li><a href="news.asp">Blog</a></li>
-                <li><a href="contact.asp">Contact</a></li>
-                <li><a href="about.asp">About</a></li>
-            </nav>
             <div class="welcome-container fadein" id="container">
                 <div class="logo">
                     <img src="./psychblue.png" id="logo-img" class="grow">
