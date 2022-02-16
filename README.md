@@ -1,12 +1,10 @@
-## Welcome to GitHub Pages
+## Welcome to Psych Studios
 
-You can use the [editor on GitHub](https://github.com/PsychStudios/psychstudios.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This is a temporary website, while we get the full version up and running. Nothing to see here folks!
+## Updates
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<details>
+  <summary>Update on 16/02/2022</summary>
 
 ```markdown
 Syntax highlighted code block
@@ -27,7 +25,7 @@ Syntax highlighted code block
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
+</details>
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PsychStudios/psychstudios.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
