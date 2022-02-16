@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        } 
+    </script>
+    <!--CSS Styling-->
+    <style>
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky+.content {
+            padding-top: 60px;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: rgb(37, 37, 37);
+        }
+
+        .bgimgcontainer {
+            box-shadow: inset 0 0 0 1000px rgba(60, 77, 105, 0.678);
+        }
+
+        .bgimg {
+            background-color: rgb(37, 37, 37);
+            background-image: linear-gradient(to bottom, transparent, rgb(37, 37, 37)), url("indexbg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .fadein {
+            animation-name: FadeIn;
+            animation-duration: .5s;
+            transition-timing-function: linear;
+        }
+
+        .welcome-container {
+            margin: 0;
+            width: 100%;
+            height: 50%;
+            display: flex;
+        }
+
+        .welcome-container {
+            /*background-color: #537abd63;*/
+
+            height: 50%;
+            ;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            padding-top: 5px;
+            padding-left: 5px;
+            margin: 0;
+        }
+
+        .logo {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            size: 60%;
+
+            padding: 5%;
+            align-self: center;
+            flex: 0 0 auto;
+        }
+
+        nav {
+            list-style-type: none;
+            width: 100%;
+            overflow: hidden;
+            background-color: linear-gradient(0deg rgba(65, 96, 148, 0.561) rgba(106, 135, 190, 0.747));
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-self: center;
+            position: relative;
+            text-align: center;
+
+
+        }
+
+        li {
+
+            margin-left: auto;
+            margin-right: auto;
+
+            align-self: center;
+            font-family: sans-serif;
+            display: inline-block;
+
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.5s
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            opacity: 0;
+        }
+
+        .container-wwd {
+            padding-top: 5%;
+            padding-left: 2%;
+        }
+
+        .wwd-title {
+            color: white;
+            font-family: sans-serif;
+            font-size: 300%;
+            
+        }
+
+        /* Fade In */
+        @keyframes FadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes FadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes FadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes FadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes FadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Grow */
+
+        .grow {
+            transition: all .2s ease-in-out;
+        }
+
+        .grow:hover {
+            transform: scale(1.1);
+        }
+
+        /* Pulsing Down */
+
+        .down {
+            -moz-transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .pulse {
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            margin: 0;
+            animation: pulsate 2s ease-out;
+            animation-iteration-count: infinite;
+            opacity: 0.0;
+            box-shadow: 0 0 1px 2px #89849b;
+            animation-delay: 2s;
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(0.9, 0.9);
+                opacity: 0.0;
+            }
+
+            50% {
+                opacity: 1.0;
+            }
+
+            100% {
+                transform: scale(1.3, 1.3);
+                opacity: 0;
+            }
+        }
+    </style>
+    <!--Top Welcome Splash-->
+    <title>Psych Studios</title>
+</head>
+
+<body>
+    <div class="bgimgcontainer fadein">
+        <div class="bgimg">
+            <nav class="fadein">
+                <li><a href="default.asp">Home</a></li>
+                <li><a href="news.asp">Blog</a></li>
+                <li><a href="contact.asp">Contact</a></li>
+                <li><a href="about.asp">About</a></li>
+            </nav>
+            <div class="welcome-container fadein" id="container">
+                <div class="logo">
+                    <img src="./psychblue.png" id="logo-img" class="grow">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-wwd">
+        <div class="wwd-title">
+            <b>What We Do.</b>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
