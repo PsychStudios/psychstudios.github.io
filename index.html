@@ -2,8 +2,8 @@
 <html>
 
 <head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--CSS Styling-->
     <style>
@@ -60,11 +60,9 @@
             margin-left: auto;
             margin-right: auto;
             display: flex;
-            size: 60%;
-
+            height: 60%;
             padding: 5%;
-            align-self: center;
-            flex: 0 0 auto;
+
         }
 
         /* Navigation Bar */
@@ -74,6 +72,7 @@
             margin-right: auto;
             overflow: hidden;
             background-color: rgba(60, 77, 105, 0.678);
+
         }
 
         /* Style the links inside the navigation bar */
@@ -111,7 +110,13 @@
             display: none;
         }
 
-        nav {}
+        .navbar-logo {
+            margin: 0;
+            padding: 0;
+            height: 90%;
+            display: inline;
+        }
+
 
         li {
 
@@ -124,21 +129,107 @@
 
         }
 
-
-        /* Change the link color to #111 (black) on hover */
-        li a:hover {}
-
         .container-wwd {
             padding-top: 5%;
             padding-left: 2%;
+            padding-right: 2%;
         }
 
         .wwd-title {
             color: white;
             font-family: sans-serif;
-            font-size: 300%;
+            font-size: 350%;
+            padding-top: 2%;
 
         }
+
+        .container-wwdl {
+            color: white;
+            font-family: sans-serif;
+            padding-right: 5%;
+            padding-left: 5%;
+            padding-bottom: 15%;
+            padding-top: 5%;
+            
+        }
+
+        .container-wwdr {
+            color: white;
+            font-family: sans-serif;
+            padding-right: 5%;
+            padding-left: 5%;
+            text-align: left;    
+            padding-bottom: 15%;  
+            padding-top: 5%;     
+        }
+
+        .wwd-body {
+            font-size: 150%;
+            overflow: hidden;
+        
+
+        }
+
+        .afterimg {
+            margin: auto;
+        }
+
+        .index-thumb-right {
+            padding: 0;
+            display: block;
+            height: 400px;
+            float: right;
+        }
+
+        .index-thumb-left {
+            padding: 0;
+            display: block;
+            height: 400px;
+            float: left;
+            padding-right: 5%;
+        }
+
+        .yurireality-button {
+            background: white;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 0px transparent;
+            text-shadow: 0px 0px 0px transparent;
+            height: 50px;
+            width: 110px;
+            margin-top: 1%;
+            transition: 0.5s;
+        }
+
+        .yurireality-button:hover {
+            background: rgb(177, 177, 177);
+            text-decoration: none;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 0px transparent;
+            text-shadow: 0px 0px 0px transparent;
+            height: 50px;
+            width: 110px;
+            margin-top: 1%;
+        }
+        .button-inactive {
+            background: rgb(68, 68, 68);
+            cursor: not-allowed;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 0px transparent;
+            text-shadow: 0px 0px 0px transparent;
+            height: 50px;
+            width: 110px;
+            margin-top: 1%;
+            margin-right: 2%;
+            transition: 0.5s;
+            color: white;
+        }
+
+
 
         /* Fade In */
         @keyframes FadeIn {
@@ -201,44 +292,7 @@
             transform: scale(1.1);
         }
 
-        /* Pulsing Down */
 
-        .down {
-            -moz-transform: rotate(135deg);
-            -webkit-transform: rotate(135deg);
-            -o-transform: rotate(135deg);
-            -ms-transform: rotate(135deg);
-            transform: rotate(135deg);
-        }
-
-        .pulse {
-            border-radius: 50%;
-            height: 60px;
-            width: 60px;
-            position: absolute;
-            margin: 0;
-            animation: pulsate 2s ease-out;
-            animation-iteration-count: infinite;
-            opacity: 0.0;
-            box-shadow: 0 0 1px 2px #89849b;
-            animation-delay: 2s;
-        }
-
-        @keyframes pulsate {
-            0% {
-                transform: scale(0.9, 0.9);
-                opacity: 0.0;
-            }
-
-            50% {
-                opacity: 1.0;
-            }
-
-            100% {
-                transform: scale(1.3, 1.3);
-                opacity: 0;
-            }
-        }
 
         /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
         @media screen and (max-width: 48em) {
@@ -250,6 +304,39 @@
                 float: right;
                 display: block;
             }
+
+            #logo-img {
+                height: 170px;
+                padding-bottom: 15px;
+            }
+
+            .wwd-title {
+                font-size: xx-large;
+            }
+
+            .index-thumb-left {
+                height: 150px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                float:none
+            }
+
+            .index-thumb-right {
+                height: 150px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                float:none;
+            }
+            .container-wwdl {
+                text-align: center;
+            
+        }
+        .container-wwdr {
+                text-align: center;
+            
+        }
         }
 
         /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -286,13 +373,14 @@
 </head>
 
 <body>
-    <div class="bgimgcontainer fadein">
-        <div class="bgimg">
-            <div class="fadein topnav" id="myTopnav">
+    <div class="bgimgcontainer">
+        <div class="bgimg fadein">
+            <div class="topnav" id="myTopnav">
+                <!--<img class="navbar-logo" src="psychblue.png">*/!-->
                 <a href="index.html" class="active">Home</a>
-                <a href="#">Blank</a>
-                <a href="#">Blank</a>
-                <a href="#">Blank</a>
+                <a>Blog</a>
+                <a>Contact</a>
+                <a>About</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -304,12 +392,32 @@
             </div>
         </div>
     </div>
-    <div class="container-wwd">
-        <div class="wwd-title">
-            <b>What We Do.</b>
+    <div class="container-wwdl">
+        <img src="psychstudioslogo1080.png" class="index-thumb-right">
+        <div class="afterimg">
+            <div class="wwd-title">
+                <b>What We Do.</b>
+            </div>
+            <div class="wwd-body">
+                Founded in 2022, Psych Studios is an independent game development studio. We are currently working on
+                mods
+                for popular visual novel "Doki Doki Literature Club!". We believe that all our content should be of the
+                highest quality possible, and stirve to ensure that at all times.
+            </div>
         </div>
     </div>
-
+    <div class="container-wwdr">
+        <img src="yurirealityplaceholder.png" class="index-thumb-left">
+        <div class="afterimg">
+            <div class="wwd-title">
+                <b>Yuri Reality.</b>
+            </div>
+            <div class="wwd-body">
+                Just a game. Lorem Ipsum and shit don't mind me.
+            </div>
+            <button href="yurireality.html" class="button-inactive">See More</button>
+            <button href="yurireality.html" class="button-inactive">Download</button>
+        </div>
 
 </body>
 
