@@ -16,10 +16,50 @@
     <script>
         function myFunction() {
             var x = document.getElementById("myTopnav");
+            var y = document.getElementById("myDropdown");
+            var z = document.getElementById("dropbtn");
+            document.getElementById("dropdown-cont").classList.toggle("cont-show");
+
             if (x.className === "topnav") {
                 x.className += " responsive";
             } else {
                 x.className = "topnav";
+            }
+            if (y.className === "dropdown-content") {
+                y.className += " show";
+            } else {
+                y.className = "dropdown-content";
+            }
+            if (z.className === "dropbtn") {
+                z.className += " show";
+            } else {
+                z.className = "dropbtn";
+            }
+        }
+
+        function barRotate(x) {
+            x.classList.toggle("change");
+        }
+
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function clickDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+
+
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
         }
     </script>
@@ -35,13 +75,23 @@
         <!-- Navigation Bar -->
         <div class="topnav-bg">
             <div class="topnav" id="myTopnav">
-                <!--<img class="navbar-logo" src="psychblue.png">*/!-->
-                <a href="index.html" class="active">Home</a>
+                <a class="active">Home</a>
+                <div class="dropdown" id="dropdown-cont">
+                    <button onclick="clickDropdown()" tag="dropbtn" id="dropbtn" class="dropbtn">Dropdown</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Yuri Reality</a>
+                        <a href="#">Upcoming</a>
+                        <a href="#">More</a>
+                    </div>
+                </div>
                 <a href="news.asp">Blog</a>
+
                 <a href="contact.asp">Contact</a>
                 <a href="about.asp">About</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
+                <a href="javascript:void(0);" class="icon nofade" onclick="barRotate(this); myFunction()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </a>
             </div>
         </div>
@@ -84,7 +134,20 @@
             <button href="yurireality.html" class="button-inactive">See More</button>
             <button href="yurireality.html" class="button-inactive">Download</button>
         </div>
+
     </div>
+    <div class="footer-container">
+
+        <div class="footer-content">
+            <div class="footer-head-1">
+                <b>Contact Us.</b>
+            </div>
+            <a href="index.html" class="active">Home</a>
+            <a href="news.asp">Blog</a>
+            <a href="contact.asp">Contact</a>
+            <a href="about.asp">About</a>
+        </div>
+
 </body>
 
 
