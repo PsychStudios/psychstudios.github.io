@@ -94,4 +94,7 @@
     #myDropdown .show {
         display: block;
     }
+    .topnav:hover {
+        opacity: 1!important;
+    }
 }
