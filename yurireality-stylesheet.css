@@ -6,9 +6,12 @@ body {
     background-color: rgb(37, 37, 37);
 }
 
+
+/* \/ CHANGED \/ */
+
 .bgimg {
     background-color: rgb(37, 37, 37);
-    background-image: linear-gradient(to bottom, transparent, rgb(37, 37, 37)), url("indexbg.jpg");
+    background-image: linear-gradient(to bottom, transparent, rgb(37, 37, 37)), url("yurireality-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -65,7 +68,7 @@ p {
 /* Add a black background color to the top navigation */
 
 .topnav-bg {
-    background-color: rgba(60, 77, 105, 0.678);
+    background-color: rgba(60, 105, 71, 0.678);
     width: 100%
 }
 
@@ -106,7 +109,7 @@ p {
 /* Add an active class to highlight the current page */
 
 .topnav a.active {
-    background-color: #5c89dd;
+    background-color: #31b637;
     color: white;
 }
 
@@ -137,7 +140,7 @@ li {
     margin-left: auto;
     margin-right: auto;
     align-self: center;
-    font-family: sans-serif;
+    font-family: monospace;
     display: inline-block;
 }
 
@@ -149,7 +152,7 @@ li {
 
 .wwd-title {
     color: white;
-    font-family: sans-serif;
+    font-family: monospace;
     font-size: max(4vw, 300%);
     padding-top: 2%;
 }
