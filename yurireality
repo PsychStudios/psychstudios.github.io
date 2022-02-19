@@ -78,7 +78,7 @@ toggle between hiding and showing the dropdown content */
         <!-- Navigation Bar -->
         <div class="topnav-bg">
             <div class="topnav" id="myTopnav">
-                <a href="index">Home</a>
+                <a href="index.html">Home</a>
                 <div class="dropdown" id="dropdown-cont">
                     <a onclick="clickDropdown()" tag="dropbtn" id="dropbtn" class="dropbtn">Games</a>
                     <div id="myDropdown" class="dropdown-content">
